@@ -67,7 +67,7 @@ func SetupEventRouting(wantedEvents string) error {
 		for _, event := range strings.Split(wantedEvents, ",") {
 			if isAuthorizedEvent(event) {
 				selectedEvents[event] = true
-				log.LogStd(fmt.Sprintf("Event Type [%s] is included in the fireshose!", event), false)
+				log.LogStd(fmt.Sprintf("Event Type [%s] is included in the firehose!", event), false)
 			} else {
 				return fmt.Errorf("Rejected Event Name [%s] - Valid events: %s", event, GetListAuthorizedEventEvents())
 			}
