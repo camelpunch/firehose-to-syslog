@@ -118,7 +118,7 @@ func main() {
 
 		firehose := firehose.CreateFirehoseChan(cfClient.Endpoint.DopplerEndpoint, cfClient.GetToken(), *subscriptionId, *skipSSLValidation)
 		if firehose != nil {
-			logging.LogStd("Firehose Subscription Succesfull! Routing events...", true)
+			logging.LogStd("Firehose Subscription Successful! Routing events...", true)
 			events.RouteEvents(firehose, extraFields)
 		} else {
 			logging.LogError("Failed connecting to Firehose...Please check settings and try again!", "")
