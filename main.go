@@ -25,7 +25,7 @@ var (
 	user              = kingpin.Flag("user", "Admin user.").Default("admin").String()
 	password          = kingpin.Flag("password", "Admin password.").Default("admin").String()
 	skipSSLValidation = kingpin.Flag("skip-ssl-validation", "Please don't").Default("false").Bool()
-	wantedEvents      = kingpin.Flag("events", fmt.Sprintf("Comma seperated list of events you would like. Valid options are %s", events.GetListAuthorizedEventEvents())).Default("LogMessage").String()
+	wantedEvents      = kingpin.Flag("events", fmt.Sprintf("Comma separated list of events you would like. Valid options are %s", events.GetListAuthorizedEventEvents())).Default("LogMessage").String()
 	boltDatabasePath  = kingpin.Flag("boltdb-path", "Bolt Database path ").Default("my.db").String()
 	tickerTime        = kingpin.Flag("cc-pull-time", "CloudController Pooling time in sec").Default("60s").Duration()
 	extraFields       = kingpin.Flag("extra-fields", "Extra fields you want to annotate your events with, example: '--extra-fields=env:dev,something:other ").Default("").String()

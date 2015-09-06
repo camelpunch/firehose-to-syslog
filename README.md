@@ -32,7 +32,7 @@ Flags:
   --skip-ssl-validation  
                       Please don't
   --events="LogMessage"  
-                      Comma seperated list of events you would like. Valid options are LogMessage, ValueMetric, CounterEvent, Error, ContainerMetric, Heartbeat, HttpStart,
+                      Comma separated list of events you would like. Valid options are LogMessage, ValueMetric, CounterEvent, Error, ContainerMetric, Heartbeat, HttpStart,
                       HttpStop, HttpStartStop
   --boltdb-path="my.db"  
                       Bolt Database path
